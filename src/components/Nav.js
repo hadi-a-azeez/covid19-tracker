@@ -56,7 +56,7 @@ const Nav = () => {
           marginLeft: 40,
         }}
       >
-        About us
+        About Me
       </Link>
 
       <Navbar.Collapse className="justify-content-end">

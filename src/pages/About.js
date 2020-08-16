@@ -1,87 +1,64 @@
-import React from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
-
-const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+import side_image from "../assets/side_image.png";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
+import "./About.css";
 
 const About = () => {
+  const [bgColor] = useState("#F7F8FC");
+  const [imgWidth] = useState("70%");
+  const [imgWidthicon] = useState("5%");
   return (
-    <div>
-      <LineChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart>
-    </div>
+    <Container fluid style={{ backgroundColor: bgColor }}>
+      <Container className="containerMain">
+        <Row>
+          <Col sm={6} className="mt-5 columnOne">
+            <h1 className="heading">Hi, Everyone !</h1>
+            <p className="paragraph mt-3 mb-0">
+              Hi, my name is Hadi Abdul Azeez . <br></br> I am a webdeveloper.
+            </p>
+            <p className="mt-1">
+              Source code for this project is <br></br>
+              available in my GitHub.
+            </p>
+            <a href={"https://github.com/hadi-a-azeez/covid19-tracker.git"}>
+              <Image
+                className=""
+                src={github}
+                alt="COVID-19"
+                fluid
+                style={{ width: imgWidthicon }}
+              />
+            </a>
+            <a href={"https://www.linkedin.com/in/hadi-azeez-321322197"}>
+              <Image
+                className="ml-3"
+                src={linkedin}
+                alt="COVID-19"
+                fluid
+                style={{ width: imgWidthicon }}
+              />
+            </a>
+          </Col>
+
+          <Col sm={6} className="mt-5 columnTwo">
+            <div className="text-right">
+              <Image
+                className=""
+                src={side_image}
+                alt="COVID-19"
+                fluid
+                style={{ width: imgWidth }}
+              />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
   );
 };
 

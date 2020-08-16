@@ -1,0 +1,23 @@
+.containerMain {
+  height: 90vh !important;
+  width: 100%;
+  background-image: url(../assets/about_bg.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.heading {
+  color: #4b556e !important;
+  font-size: 50px;
+}
+h1 {
+  margin-top: 40px !important   ;
+}
+p {
+  color: #4b556e !important;
+  font-size: 20px;
+}
+.columnOne {
+  padding-left: 80px !important;
+}
