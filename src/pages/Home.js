@@ -8,6 +8,7 @@ import Image from "react-bootstrap/Image";
 import { fetchData } from "../api";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
+import Spinner from "react-bootstrap/Spinner";
 
 const Home = () => {
   const [bgColor] = useState("#F7F8FC");
@@ -29,7 +30,7 @@ const Home = () => {
     })();
   }, []);
   if (!data.confirmed) {
-    return "Loading...";
+    return <Spinner animation="grow" />;
   }
   return (
     <Container fluid style={{ backgroundColor: bgColor }} className="h-100">

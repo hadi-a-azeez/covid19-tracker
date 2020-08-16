@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const url = "https://covid19.mathdro.id/api";
+const urlTotal = "https://covid19.mathdro.id/api";
 
 export const fetchData = async () => {
   try {
     const {
       data: { confirmed, recovered, deaths, lastUpdate },
-    } = await axios.get(url);
+    } = await axios.get(urlTotal);
 
     return { confirmed, recovered, deaths, lastUpdate };
   } catch (error) {
@@ -47,5 +47,14 @@ export const fetchStateData = async (state) => {
     } catch (error) {
       return error;
     }
+  }
+};
+const urlCountries = "https://disease.sh/v3/covid-19/countries";
+export const fetchCountries = async () => {
+  try {
+    const countreisData = await axios.get(urlCountries);
+    return countreisData;
+  } catch (err) {
+    return err;
   }
 };
