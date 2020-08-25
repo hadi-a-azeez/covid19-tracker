@@ -1,0 +1,19 @@
+.statePicker {
+  border-bottom: 4px solid rgba(25, 101, 255, 1) !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-radius: 0px !important;
+  width: 25% !important;
+}
+@media screen and (max-width: 400px) {
+  .statePicker {
+    border-bottom: 4px solid rgba(25, 101, 255, 1) !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-radius: 0px !important;
+    width: 75% !important;
+    margin-left: 0px !important;
+  }
+}

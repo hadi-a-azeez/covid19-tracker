@@ -47,7 +47,7 @@ const Map = ({ countries, casesType, center, zoom }) => {
     ));
 
   return (
-    <Col sm={6} className="mt-3 ml-4">
+    <Col sm={6} className="cardColumn mt-3 ml-4">
       <div className="map">
         <LeafletMap center={center} zoom={zoom}>
           <TileLayer

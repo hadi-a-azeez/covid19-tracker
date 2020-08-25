@@ -3,6 +3,7 @@ import { Navbar } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import "./Nav.css";
 
 const Nav = () => {
   const [primaryColor] = useState("#1965FF");
@@ -11,54 +12,24 @@ const Nav = () => {
 
   return (
     <Navbar expand="lg" variant="light" bg="white">
-      <Link
-        to="/"
-        style={{
-          color: smTextColor,
-          textDecoration: decoration,
-          fontSize: 17,
-          marginLeft: 40,
-        }}
-      >
-        Home
-      </Link>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse>
+        <Link class="navItem" to="/">
+          Home
+        </Link>
 
-      <Link
-        to="/dashboard"
-        style={{
-          color: smTextColor,
-          textDecoration: decoration,
-          fontSize: 17,
-          marginLeft: 40,
-        }}
-      >
-        Dashboard
-      </Link>
+        <Link class="navItem" to="/dashboard">
+          Dashboard
+        </Link>
 
-      <Link
-        to="/prevention"
-        style={{
-          color: smTextColor,
-          textDecoration: decoration,
-          fontSize: 17,
-          marginLeft: 40,
-        }}
-      >
-        Prevention
-      </Link>
+        <Link class="navItem" to="/prevention">
+          Prevention
+        </Link>
 
-      <Link
-        to="/about"
-        style={{
-          color: smTextColor,
-          textDecoration: decoration,
-          fontSize: 17,
-          marginLeft: 40,
-        }}
-      >
-        About Me
-      </Link>
-
+        <Link class="navItem" to="/about">
+          About Me
+        </Link>
+      </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
           <Button

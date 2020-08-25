@@ -21,7 +21,7 @@ const About = () => {
             <p className="paragraph mt-3 mb-0">
               Hi, my name is Hadi Abdul Azeez . <br></br> I am a webdeveloper.
             </p>
-            <p className="mt-1">
+            <p className="paragraph mt-1 ">
               Source code for this project is <br></br>
               available in my GitHub.
             </p>
