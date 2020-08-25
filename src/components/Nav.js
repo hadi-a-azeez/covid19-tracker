@@ -7,26 +7,24 @@ import "./Nav.css";
 
 const Nav = () => {
   const [primaryColor] = useState("#1965FF");
-  const [smTextColor] = useState("#505577");
-  const [decoration] = useState("none");
 
   return (
     <Navbar expand="lg" variant="light" bg="white">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse>
-        <Link class="navItem" to="/">
+        <Link className="navItem" to="/">
           Home
         </Link>
 
-        <Link class="navItem" to="/dashboard">
+        <Link className="navItem" to="/dashboard">
           Dashboard
         </Link>
 
-        <Link class="navItem" to="/prevention">
+        <Link className="navItem" to="/prevention">
           Prevention
         </Link>
 
-        <Link class="navItem" to="/about">
+        <Link className="navItem" to="/about">
           About Me
         </Link>
       </Navbar.Collapse>
